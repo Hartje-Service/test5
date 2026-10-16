@@ -1,0 +1,61 @@
+﻿site_name: test5
+site_description: Výrobní manuál pro modely 
+site_author: Hartje Production
+docs_dir: docs
+site_url: "https://"
+use_directory_urls: false
+
+
+theme:
+  name: material
+  language: cs
+  palette:
+    primary: '#0b4ea2'
+    accent: '#009fe3'
+  logo: images/hartje_logo.png
+
+extra_css:
+  - styles/extra.css
+extra_javascript: []
+
+plugins:
+  - search
+  - include-markdown:
+      preserve_includer_indent: false
+      recursive: true
+      heading_offset: 0
+      encoding: utf-8
+      rewrite_relative_urls: true
+      dedent: true
+      comments: true
+  - macros
+
+markdown_extensions:
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.snippets
+  - attr_list
+
+extra:
+  include_dir: ../../modules
+
+nav: 
+  - "index.md"
+  
+  - Obecné:
+      - Specifikace: obecne/specifikace.md
+      - Bezpečnost: obecne/bezpecnost.md
+      - Nástroje: obecne/nastroje.md
+      
+  - Modely:
+      - Sablona_modelu:
+          - Přehled: modely/sablona_modelu/Přehled.md
+          - Montáž: modely/sablona_modelu/Montáž.md
+          - Kusovníky: modely/sablona_modelu/Kusovníky.md
+                     
+  - Přílohy:
+      - Tabulka momentů: prilohy/moment.md
+      - Výkresy rámů: prilohy/vykresy.md
+      - Soupis spojovacího materálu: prilohy/spoj_mat.md
+      - Seznam kompomentů: prilohy/seznam_komponentu.md
